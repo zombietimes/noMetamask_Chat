@@ -1,0 +1,41 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a {
+  color: #00B7FF;
+}
+button, p, textarea, label {
+  font-size: large;
+}
+
+/*-- #iNode
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+#iNode .cNode{
+  display: inline-block;
+}
+#iNode input[type=radio]{
+  display: none;
+}
+#iNode input[type=radio] + label {
+  margin-right: 10px;
+  color: #999;
+  border-bottom: none;
+}
+#iNode input[type=radio]:checked + label {
+  color: #333;
+  border-bottom: 1px solid #333;
+}
+#iNodeBlock{
+  padding: 10px;
+  border-bottom: 1px solid #333;
+}
+#iNodeBlock0{
+  display: block;
+}
+#iNodeBlock1,#iNodeBlock2,#iNodeBlock3{
+  display: none;
+}
+#iInfo0,#iInfo1,#iInfo3{
+  color: #FF0000;
+}

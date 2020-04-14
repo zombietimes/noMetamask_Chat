@@ -1,0 +1,124 @@
+extends layout
+
+block content
+  form(id="iNode")
+    input(id="iNode0" type="radio" name="nNode" value="vNode0" checked)
+    label(id="iNode0L" class="cNode" for="iNode0") wallet
+    input(id="iNode1" type="radio" name="nNode" value="vNode1")
+    label(id="iNode1L" class="cNode" for="iNode1") address
+    input(id="iNode2" type="radio" name="nNode" value="vNode2")
+    label(id="iNode2L" class="cNode" for="iNode2") history
+    input(id="iNode3" type="radio" name="nNode" value="vNode3")
+    label(id="iNode3L" class="cNode" for="iNode3") contract
+    div(id="iNodeBlock")
+      div(id="iNodeBlock0")
+        h2 Preparation
+        textarea(id='iPassword0' cols='60' rows='1' placeholder='password') this is password
+        br
+        button(type='button' id='iReady0') Ready
+        br
+        h2 Import Account
+        textarea(id='iPrivateKey0' cols='60' rows='3' placeholder='privateKey')
+        br
+        textarea(id='iAddress0' cols='60' rows='1' placeholder='address')
+        br
+        button(type='button' id='iImport0') Import
+        br
+        br
+        p(id='iInfo0') Not ready.
+        br
+        br
+      div(id="iNodeBlock1")
+        h2 My account
+        button(type='button' id='iSelfPrevious1') <
+        button(type='button' id='iSelfNext1') >
+        br
+        textarea(id='iSelfName1' cols='60' rows='1' placeholder='name')
+        br
+        textarea(id='iSelfAddr1' cols='60' rows='1' readonly)
+        br
+        textarea(id='iSelfAmount1' cols='60' rows='1' readonly) 0 Wei
+        br
+        button(type='button' id='iSelfSave1') save
+        br
+        br
+        h2 Destination account
+        button(type='button' id='iPeerPrevious1') <
+        button(type='button' id='iPeerNext1') >
+        br
+        textarea(id='iPeerName1' cols='60' rows='1' placeholder='name')
+        br
+        textarea(id='iPeerAddr1' cols='60' rows='1' placeholder='0x...')
+        br
+        button(type='button' id='iPeerSave1') save
+        br
+        br
+        h2 Sending
+        button(type='button' id='iUnit1') Wei
+        br
+        textarea(id='iAmountSend1' cols='60' rows='1') 0
+        br
+        button(type='button' id='iSendNow1') send now
+        br
+        p(id='iInfo1') information
+        button(type='button' id='iRefresh1') refresh
+      div(id="iNodeBlock2")
+        h2 Activity
+        label Page No :
+        label(id='iPage2') 1
+        br
+        button(type='button' id='iPrevious2') <
+        button(type='button' id='iNext2') >
+        p(id='iHistory0')
+        p(id='iHistory1')
+        p(id='iHistory2')
+        p(id='iHistory3')
+        br
+        br
+      div(id="iNodeBlock3")
+        label One time chat on the blockchain.
+        br
+        h2 My account
+        button(type='button' id='iSelfPrevious3') <
+        button(type='button' id='iSelfNext3') >
+        br
+        textarea(id='iSelfName3' cols='60' rows='1' placeholder='name')
+        br
+        textarea(id='iSelfAddr3' cols='60' rows='1' readonly)
+        br
+        p(id='iInfo3') information
+        br
+        h2 Send message
+        label Destination account
+        br
+        button(type='button' id='iPeerPrevious3') <
+        button(type='button' id='iPeerNext3') >
+        br
+        textarea(id='iPeerName3' cols='60' rows='1' placeholder='name')
+        br
+        textarea(id='iPeerAddr3' cols='60' rows='1' placeholder='0x...')
+        br
+        textarea(id='iSendText3' cols='60' rows='1' placeholder='message')
+        br
+        button(type='button' id='iSendBtn3') 1. Send *
+        br
+        h2 Receive message
+        label Destination account
+        br
+        textarea(id='iFromAddr3' cols='60' rows='1' placeholder='0x...')
+        br
+        textarea(id='iFromText3' cols='60' rows='1' placeholder='message')
+        br
+        button(type='button' id='iRecvBtn3') 2. Receive
+        br
+        button(type='button' id='iWithDrawBtn3') 3. Withdraw *
+        br
+        br
+    hr
+  br
+
+  script(type='text/javascript',src='https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.min.js')
+  script(type='text/javascript',src='https://cdn.jsdelivr.net/npm/loom-js@1.15.0/dist/loom.umd.js')
+  script(type='text/javascript',src='https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js')
+  script(type='text/javascript',src='/javascripts/abiJson_node.js')
+  script(type='text/javascript',src='/javascripts/run_node.js')
